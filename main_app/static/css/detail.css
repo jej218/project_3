@@ -104,6 +104,8 @@ textarea {
     padding: 10px;
     border: 1px solid var(--legendBackground);
     border-radius: 10px;
+    max-height: 400px;
+    overflow: auto;
 }
 
 textarea:focus-visible {
@@ -129,7 +131,7 @@ ul.select-dropdown > li {
 }
 
 .select-dropdown.dropdown-content li.selected > span {
-font-weight: 600;
+    font-weight: 600;
     color: var(--navBackground)
 }
 
@@ -188,7 +190,7 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
     font-family: var(--fonts);
 }
 
-#new-comment-fieldset input.btn:focus {
+#new-comment-fieldset input.btn:focus, #new-comment-fieldset input.btn:hover {
     background-color: rgba(68, 103, 130, 0.25);
 }
 
@@ -201,7 +203,7 @@ th {
 
 .collapsible {
     background-color: var(--navBackground);
-    color: var(--formText);
+    color: var(--legendBackground);
     cursor: pointer;
     padding: 8px;
     width: 100%;
@@ -231,16 +233,16 @@ th {
 }
 
 .collapsible:hover {
-    
+    color: var(--navText)
 }
 
-.card-animation-alt:hover:before {
+.collapsible:hover:before {
     right: 0;
 }
 
-.active {
-    background-color: var(--navText);
-
+.collapsible:focus {
+    color: var(--navText);
+    background-color: var(--navBackground);
 }
 
 .collapsible:after {
@@ -249,9 +251,14 @@ th {
     font-weight: bold;
     float: right;
     margin-left: 5px;
+    transition: color .8s ease-in-out;
 }
 
-.active:after {
+.collapsible:hover::after {
+    color: var(--navText);
+}
+
+button.active:after {
     content: "\2212";
 }
 
@@ -263,7 +270,6 @@ th {
     background-color: var(--navBackground);
     border-radius: 10px;
 }
-
 
 
 .photo-wrapper {
@@ -285,4 +291,11 @@ img.responsive-img {
 
 h1 {
     color: var(--navText);
+}
+
+.select-dropdown.dropdown-content {
+    box-shadow: none;
+    border-radius: 10px;
+    max-height: 600px;
+    overflow: auto;
 }

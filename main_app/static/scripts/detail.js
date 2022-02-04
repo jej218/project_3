@@ -8,8 +8,10 @@ for (i = 0; i < coll.length; i++) {
         var content = this.nextElementSibling;
         if (content.style.maxHeight) {
             content.style.maxHeight = null;
+            content.style.overflow = 'hidden';
         } else {
-            content.style.maxHeight = content.scrollHeight *2 + "px";
+            content.style.maxHeight = content.scrollHeight * 10 + "px";
+            content.style.overflow = 'visible'
         }
     });
 }
