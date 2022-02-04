@@ -7,7 +7,7 @@
     --font: 'Quicksand', sans-serif;
   }
   
-#form-fieldset, legend{
+#form-fieldset{
   background-color: var(--legendBackground);
   border: 8px solid var(--legendBackground);
   border-radius: 10px;
@@ -16,6 +16,9 @@
 }
 
 legend {
+  background-color: var(--legendBackground);
+  border: 8px solid var(--legendBackground);
+  border-radius: 10px;
   padding: 0px 5px;
   font-size: 40px;
   color: var(--navText);
@@ -195,3 +198,7 @@ textarea:focus-visible {
   border: 2px solid var(--navText);
 }
 
+i {
+  color: var(--navBackground);
+  font-weight: 300;
+}

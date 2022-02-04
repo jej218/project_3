@@ -1,13 +1,24 @@
-{% extends 'base.html' %}
-
+{% extends 'base.html'%}
+{% load static %}
+{% block extrahead %}
+<link rel='stylesheet' type='text/css' href="{% static 'css/delete.css' %}">
+{% endblock extrahead %}
 {% block content %}
-  <h1>Delete Job</h1>
 
-  <h4>Are you sure you want to delete <span class="teal-text">{{ object.company_name }}</span>?</h4>
 
-  <form action="" method="POST">
-    {% csrf_token %}
-    <input type="submit" value="Yes - Delete!" class="btn">
-    <a href="{% url 'job_detail' object.id %}">Cancel</a>
-  </form>
+<div id="myModal" class="modal">
+  <div class="modal-content" id='modal-wrapper'>
+    <span class="close">&times;</span>
+    <div class="modal-form">
+      <h4>Please confirm that you wish to delete <i>{{ object.company_name }}</i></h4>
+      <form action="" method="POST">
+        {% csrf_token %}
+        <input type="submit" value="Yes - Delete!" class="btn">
+        <a href="{% url 'job_detail' object.id %}" class="btn">No - Cancel!</a>
+      </form>
+    </div>
+  </div>
+
+</div>
+<script src="{% static 'scripts/delete.js' %}"></script>
 {% endblock %}

@@ -9,10 +9,6 @@ const projectDiv = document.getElementById('projects');
 const projectAdd = document.getElementById('project-add');
 const projectView = document.getElementById('project-view');
 
-const photoHolder = document.getElementById('photo-holder');
-const photoDiv = document.getElementById('photos');
-const photoAdd = document.getElementById('photo-add');
-const photoView = document.getElementById('photo-view');
 
 const noUser = document.getElementById('no-user-profile-management');
 

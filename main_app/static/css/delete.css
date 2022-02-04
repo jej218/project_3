@@ -1,0 +1,99 @@
+:root {
+    --background: rgb(96, 130, 158);
+    --navBackground: #B1A296;
+    --navText: #464549;
+    --legendBackground: rgb(130, 120, 130);
+    --formText: #557a95;
+    --font: 'Quicksand', sans-serif;
+}
+
+body {
+    min-height: calc(100vh - 80px);
+}
+
+.modal {
+    display: block;
+    position: fixed;
+    z-index: 1;
+    padding-top: 0px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    overflow: visible;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: var(--navBackground);
+    margin-top: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    width: 50%;
+}
+
+#modal-wrapper {
+    padding: 0px
+}
+
+.modal-form {
+    color: var(--legendBackground);
+    padding: 20px;
+    text-align: center;
+}
+
+.close {
+    color: var(--legendBackground);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 1;
+    margin: 4px;
+    width: 30px;
+    height: 30px;
+    max-height: 30px;
+    max-width: 30px;
+    text-align: center;
+    border-radius: 50%;
+    transition: all 0.6s ease-in-out;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--navText);
+    text-decoration: none;
+    cursor: pointer;
+    background-color: var(--formText);
+}
+
+i {
+    color: var(--formText);
+    font-weight: 300;
+}
+
+.modal-form form {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+    border-top: 1px solid var(--legendBackground);
+}
+
+.btn {
+    box-shadow: none;
+    background-color: var(--formText);
+    color: var(--navText);
+    font-family: var(--font);
+    border-radius: 5px;
+    transition: all 0.6s ease-in-out;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.btn:hover {
+    box-shadow: none;
+    background-color: var(--navText);
+    color: var(--navBackground);
+}

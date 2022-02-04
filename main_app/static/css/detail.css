@@ -197,9 +197,11 @@ th {
     color: var(--navText);
 }
 
+
+
 .collapsible {
     background-color: var(--navBackground);
-    color: var(--legendBackground);
+    color: var(--formText);
     cursor: pointer;
     padding: 8px;
     width: 100%;
@@ -208,10 +210,35 @@ th {
     outline: none;
     font-size: 20px;
     box-shadow: none;
-border-radius: 5px;
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+    transition: color .8s ease-in-out;
 }
 
-.active, .collapsible:hover {
+.collapsible:before {
+    content: '';
+    position: absolute;
+    background-color: var(--legendBackground);
+    color: var(--formText);
+    bottom: 0;
+    left: 0;
+    right: 100%;
+    top: 0;
+    z-index: -1;
+    transition: right .8s ease-in-out;
+    border-radius: 5px;
+}
+
+.collapsible:hover {
+    
+}
+
+.card-animation-alt:hover:before {
+    right: 0;
+}
+
+.active {
     background-color: var(--navText);
 
 }
@@ -237,35 +264,7 @@ border-radius: 5px;
     border-radius: 10px;
 }
 
-.collapsible:focus {
-    background-color: var(--navText);
-    color: var(--formText);
-}
 
-.card-animation-alt { 
-    color: var(--navText);
-    border-radius: 5x;
-    position: relative;
-    z-index: 1;
-    box-shadow: none;
-}
-
-.card-animation-alt:before {
-    content: '';
-    position: absolute;
-    background-color: var(--navBackground);
-    bottom: 0;
-    left: 0;
-    right: 100%;
-    top: 0;
-    z-index: -1;
-    transition: right .8s ease-in-out;
-    border-radius: 5px;
-}
-
-.card-animation-alt:hover:before {
-    right: 0;
-}
 
 .photo-wrapper {
     display: flex;
@@ -284,3 +283,6 @@ img.responsive-img {
     box-shadow: none;
 }
 
+h1 {
+    color: var(--navText);
+}
