@@ -3,7 +3,7 @@
     --navBackground: #B1A296;
     --navText: #464549;
     --legendBackground: rgb(130, 120, 130);
-    --formText: #557a95;
+    --formText: #405e74;
     --font: 'Quicksand', sans-serif;
 }
 
@@ -298,4 +298,29 @@ h1 {
     border-radius: 10px;
     max-height: 600px;
     overflow: auto;
+}
+
+.existing-comments-wrapper {
+    background-color: var(--legendBackground);
+    border-radius: 15px;
+}
+
+.striped {
+    margin: 20px;
+}
+
+th {
+    font-weight: 400;
+}
+
+table.striped>tbody>tr:nth-child(odd) {
+    background-color: var(--background);
+}
+
+tbody tr {
+    background-color: var(--formText);
+}
+
+table.striped>tbody>tr {
+    border-radius: 10px;
 }
